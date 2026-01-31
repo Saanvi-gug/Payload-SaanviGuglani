@@ -27,7 +27,6 @@ model.load_state_dict(torch.load('best_model.pth'))
 model.eval()
 # Results Visualization
 The model shows high precision in identifying large obstacles like Rocks and Trees, while maintaining a clean boundary for the Sky.[Image showing comparison of original image, ground truth mask, and model prediction]
-# Saanvi Guglani - Student B Tech AI and ML
 Note for the Judges
 The model was trained for 40 epochs on a T4 GPU. Further improvements can be made by implementing Weighted Cross-Entropy to handle rare classes like "Flowers" or "Logs" more effectively.
 # Payload-SaanviGuglani
