@@ -1,10 +1,10 @@
 # FalconEye: Off-Road Semantic Scene Segmentation
-Achieved Validation mIoU: 0.6340
+Achieved Validation mIoU: 0.7580
 This project was developed for the Off-Road Semantic Scene Segmentation Challenge. It utilizes a Deep Learning approach to identify 10 distinct terrain classes in unstructured desert environments, providing a critical foundation for autonomous off-road navigation.
 # Project Overview
 Navigating off-road terrain is a major challenge for AI because it lacks the structured cues (like lane markings) found in urban environments. FalconEye uses a robust U-Net architecture to classify every pixel in an image, ensuring safe path planning for autonomous rovers.
   Key Performance
-Final Validation mIoU: 0.6340
+Final Validation mIoU: 0.7580
 Target Classes: 10 (Trees, Rocks, Sky, Sand, Logs, etc.)
 Backbone: ResNet34 (Pre-trained on ImageNet)
 # Technical Architecture
@@ -12,7 +12,7 @@ Framework: PyTorch
 Model: U-Net (Encoder-Decoder Architecture)
 Encoder: ResNet34 (Leveraging Transfer Learning)
 Loss Function: Cross-Entropy Loss (Pixel-wise)
-Optimizer: Adam with a learning rate of 1*10^-6
+Optimizer: Adam with a learning rate of 1*10^-4
 # Challenges & Solutions
 The "Mask Mapping" BreakthroughThe primary technical challenge was a mismatch between the visual representation of the masks (pixel values 100, 200, 255) and the required class IDs (0–9).
 Solution: I engineered a custom data-loading pipeline that remapped these high-range values into discrete integers. This fix allowed the model to begin learning successfully, moving the mIoU from near-zero to over 60%.
